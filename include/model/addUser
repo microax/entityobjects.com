@@ -1,0 +1,31 @@
+#!/usr/bin/php
+<?php
+
+require "UserLoginModelForScript";
+
+$json = <<<EOF
+{
+    "userId":         0,
+    "accountId":      1,
+    "userName":      "cyrusface@gmail.com",
+    "userPassword":  "dixiebitch",
+    "userFirstName": "Megan",
+    "userLastName":  "(Dixie) Williams",
+    "userLastLogin": "now()",
+    "userCreated":   "now()",
+    "userModified":  "now()", 
+    "userStatus":    "ACTIVE"
+}
+EOF;
+
+$db      = new UserLoginModel();
+
+$user = new User($json);
+$user->userCreated   = date("Y-m-d H:i:s");
+$user->userModified  = date("Y-m-d H:i:s");
+$user->userLastLogin = date("Y-m-d H:i:s");
+
+$db->insertUserLogin($user); 
+
+
+?>
