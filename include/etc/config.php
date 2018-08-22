@@ -7,7 +7,7 @@
 
 function pubServerAddress()
 {
-    return("http://temp.metaq");
+    return("http://entityobjects.com");
 }
 
 function smtpConfig()
