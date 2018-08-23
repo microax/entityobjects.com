@@ -5,6 +5,11 @@
  ***********************************
 */			
 
+function systemEmail()
+{
+    return("mgill@metaqueue.net");
+}
+
 function pubServerAddress()
 {
     return("http://entityobjects.com");
