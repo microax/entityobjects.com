@@ -17,11 +17,11 @@ function head()
     <meta name="keywords" content="ORM,Object Relational Mapping ,PHP,PDO,Michael Gill , PHP, MySql, database, code generator, framework" />
     <meta name="description" content="A small & simple ORM solution for PHP"/>
     <title>EntityObjects.com</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/font-awesome.min.css" rel="stylesheet" >
-	<link href="css/animate.css" rel="stylesheet" />
-	<link href="css/prettyPhoto.css" rel="stylesheet"> 
-	<link href="css/style.css" rel="stylesheet">	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/font-awesome.min.css" rel="stylesheet" >
+	<link href="/css/animate.css" rel="stylesheet" />
+	<link href="/css/prettyPhoto.css" rel="stylesheet"> 
+	<link href="/css/style.css" rel="stylesheet">	
   </head>
   <body>
 <?php
