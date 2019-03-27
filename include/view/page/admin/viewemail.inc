@@ -89,37 +89,6 @@ EOF;
     return(emailHead().$emailString.emailFoot($user));
 }
 
-/**
- * viewSystemEventEmail()
- *
- * @param string  -- $text
- * @return string -- html email
- */			
-function viewSystemEventEmail($text)
-{
-    $pubserver   = pubServerAddress();
-    $emailString = <<<EOF
-  <section id="home">
-    <div class="container">
-      <div class="col-md-6 col-md-offset-3">
-      <hr>
-      <p class="lead">
-        {$text}
-      </p> 
-      <p class="lead">
-        <a href="{$pubserver}/admin/">
-         Login for details
-        </a>
-      </p>
-    </div>
-  </div>
-  </section>
-    
-EOF;
-
-    return(emailHead().$emailString.emailFoot2());
-}
-
 
 /**
  * emailFoot()
@@ -142,39 +111,6 @@ function emailFoot($user)
           <div class="col-lg-12">
             <div class="social">
 	    </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-</body>
-</html>
-    
-EOF;
-
-    return($emailString);
-}
-
-/**
- * emailFoot2() -- no unsubscribe link
- *
- * @return string -- $emailString
- */			
-function emailFoot2()
-{
-    $pubserver   = pubServerAddress();
-    $emailString = <<<EOF
-
-  <footer id="footer" class="midnight-blue">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          &copy; 2018 metaQ.io  &nbsp;&nbsp;&nbsp;
-        </div>
-        <div class="top-bar">			
-          <div class="col-lg-12">
-            <div class="social">
-	        </div>
           </div>
         </div>
       </div>

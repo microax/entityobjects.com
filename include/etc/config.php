@@ -5,14 +5,9 @@
  ***********************************
 */			
 
-function systemEmail()
-{
-    return("mgill@metaqueue.net");
-}
-
 function pubServerAddress()
 {
-    return("http://entityobjects.com");
+    return("http://temp.metaq");
 }
 
 function smtpConfig()

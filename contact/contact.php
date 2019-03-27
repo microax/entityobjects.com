@@ -29,24 +29,6 @@ if(isCaptchaOK())
     $db = new ContactModel();
     $db->insert($contact);
 
-    //-------------------------------------------
-    // Send notification email to 
-    // entityobjects.com admin
-    //-------------------------------------------
-    require_once "../include/etc/email/email.php";
-    require_once "../include/etc/config.php";
-    require_once "../include/view/page/admin/users.inc";
-
-    $email = new Email();
-    $textBody =$contact->contactName." sent a contact message.";
-    $email->senderName   = "metaQ.io Notifications";
-    $email->toEmail      = systemEmail();
-    $email->toName       = "Sys Admin";
-    $email->subject      = $contact->contactSubject;
-    $email->body         = viewSystemEventEmail($textBody);
-    
-    $email->send();
-
     dbface("Thank You!", "/");  
 }
 else
