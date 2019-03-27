@@ -14,7 +14,7 @@ function nav()
     //---------------------------------------------
     // navbar links...
     //---------------------------------------------
-    $what     ="\"#about\"".$datatoggle;
+    $what     ="\"#what\"".$datatoggle;
     $why      ="\"#why\"".$datatoggle;
     $download ="\"/download/\"".$datatoggle;
     $faq      ="\"#faq\"".$datatoggle;
@@ -36,11 +36,11 @@ function nav()
             </div>
             <div class="collapse navbar-collapse" id="menu">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href=<?php echo $what; ?>>What</a></li>
+                <!-- <li><a href=<?php echo $what; ?>>What</a></li>
                 <li><a href=<?php echo $why; ?>>Why</a></li>
                 <li><a href=<?php echo $download; ?>>DOWNLOAD</a></li>
                 <li><a href=<?php echo $faq; ?>>FAQ</a></li>
-                <li><a href=<?php echo $contact; ?>>Contact</a></li>
+                <li><a href=<?php echo $contact; ?>>Contact</a></li> -->
               </ul>
             </div>
           </div>

@@ -9,9 +9,9 @@ function why()
 {
 ?>
   <section id="why">
+    <br><br>
     <div class="container">
       <div class="center">
-        <br><br><br>
         <div class="col-md-6 col-md-offset-3">
           <h2>ORM</h2>
           <hr>					

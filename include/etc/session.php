@@ -85,6 +85,18 @@ function setCaptchaOK()
     $_SESSION['CAPTCHA_OK'] = "YES";
 }
 
+/*
+ * set CAPTCHA NOT OK
+ *
+ * @param  null
+ * @return null
+ * 
+*/			
+function setCaptchaNOTOK()
+{
+    unset ($_SESSION['CAPTCHA_OK']);
+}
+
 
 /*
  * Is ADMIN_LOGIN_OK set
@@ -151,7 +163,10 @@ function setUserSession($p, $v)
 */			
 function getUserSession($p)
 {
-    return($_SESSION[$p]);
+    if(isset($_SESSION[$p]))
+        return($_SESSION[$p]);
+    else
+        return("");
 }
 
 /*
@@ -185,5 +200,69 @@ function setPermission($p)
     $_SESSION[$p] = "YES";
 }
 
+/*
+ * UnSet a user permission
+ *
+ * @param  string $p user permission
+ * @return null
+ * 
+*/			
+function unsetPermission($p)
+{
+    unset($_SESSION[$p]);
+}
+
+/*
+ * returns true if logged-in user is on an iphone
+ *
+ * @return true or false
+ * 
+*/			
+function isIphone()
+{
+    if(strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone') !== false)
+        return(true);
+    else
+        return(false);
+}
+
+/*
+ * returns true if logged-in user is on an iphone
+ * and AppleCoreMedia is the current user agent
+ *
+ * @return true or false
+ * 
+*/			
+function isIphoneUI()
+{
+    if(strpos($_SERVER['HTTP_USER_AGENT'], 'AppleCoreMedia') !== false)
+        return(true);
+    else
+        return(false);
+}
+
+/*
+ * set login destination 
+ *
+ * @param  string  -- $url
+ * @return n/a
+ * 
+**/			
+function setLoginDestination($url)
+{
+    setUserSession('DEST_URL', $url);
+}
+
+/*
+ * get login destination 
+ *
+ * @param  n/a
+ * @return string - $url
+ * 
+**/			
+function getLoginDestination()
+{
+    return(getUserSession('DEST_URL'));
+}
 
 ?>

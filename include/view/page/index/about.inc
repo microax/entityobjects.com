@@ -9,6 +9,7 @@ function about()
 {
 ?>
   <section id="about">
+    <br><br>
     <div class="container">
       <div class="center">
         <div class="col-md-6 col-md-offset-3">
